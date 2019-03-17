@@ -1,0 +1,123 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video{
+    margin:0px; /*外边距 上 右 下 左*/
+    padding:0px; /*内边距*/
+    border:0px; /*边框样式*/
+    font-size:100%;
+    font:inherit; /*字体继承父类*/
+    vertical-align:baseline; /*设置元素的垂直对齐方式。*/
+}
+
+body{
+    background-image:url(b.jpg);
+    line-height:1; /*设置行间的距离（行高）*/
+    font:12px/20px  Verdana; /*font-size/line-height，用来规定字体尺寸和行高*/
+    /*Verdana是一套无衬线字体，它在小字上有结构清晰端整、阅读辨识容易等高品质表现.*/
+}
+
+
+
+.login{  /*登录界面的主窗口的信息*/
+    margin:50px auto; /*上边距50px 左右下为auto, margin：1px 2px 3px 4px 这个的顺序依次为：上 右 下 左*/
+    padding: 80px 20px;
+    width:300px;
+    background:#3f65b7;
+    background-clip:border-box; /*规定背景的绘制区域*/
+    border:1px solid #172b4e;
+    border-bottom-color:#142647; /*设置元素的下边框的颜色*/
+    border-radius:5px; /*为元素添加圆角边框*/
+}
+
+
+.login-input{
+    display: block;  			 /* display 属性规定元素应该生成的框的类型。block表示元素将显示为块级元素，此元素前后会带有换行符。*/
+    width: 93%; 				 /* 定义基于包含块（父元素）宽度的百分比宽度*/
+    height: 37px;
+    margin-bottom: 20px; 		 /*下外边距*/
+    padding: 0 9px; 			 /*padding 简写属性在一个声明中设置所有内边距属性*/
+    color: white;
+    text-shadow: 0 1px black;    /*文本框内字体阴影*/
+    background:#333; 			 /* 灰色背景 */
+    border-radius: 4px;          /* 向 div 元素添加圆角边框 */
+}
+
+.login-input:focus{
+    outline: 0; /*（轮廓）是绘制于元素周围的一条线，位于边框边缘的外围，可起到突出元素的作用*/
+    background-color: #32486d;      
+}
+
+
+.login-submit{
+    display:block; /*display用于定义建立布局时元素生成的显示框类型.block元素将显示为块级元素，此元素前后会带有换行符*/
+    width: 100%;
+    height:37px;
+    margin-bottom:15px;
+    font-size:14px;
+    font-weight:bold;
+    color: #294779;
+    background:#adcbfa;
+    border:1px solid #284473;
+    border-radius:5px;
+    cursor: pointer;  /*显示的光标的类型（形状）*/
+}
+
+.login-ctl00_txtcode{
+	
+	display: block;  			 /* display 属性规定元素应该生成的框的类型。block表示元素将显示为块级元素，此元素前后会带有换行符。*/
+    width: 45%; 				 /* 定义基于包含块（父元素）宽度的百分比宽度*/
+    height: 37px;
+    margin-bottom: 20px; 		 /*下外边距*/
+    padding: 0 9px; 			 /*padding 简写属性在一个声明中设置所有内边距属性*/
+    color: white;
+    text-shadow: 0 1px black;    /*文本框内字体阴影*/
+    background:#333; 			 /* 灰色背景 */
+    border-radius: 4px;          /* 向 div 元素添加圆角边框 */
+	float:left
+}
+
+.login-code{
+    width: 45%;
+	height: 37px;
+	font-family: Arial;
+	font-style: italic;
+	font-weight: bold;
+	letter-spacing: 2px;
+	color: blue;
+	float: right;
+}
+
+
+.login-submit:active{
+    background:#a4c2f3;
+}
+.login-help{
+    text-align:center;
+}
+.login-help a{
+    font-size:12px;
+    color:#CCC;
+    text-decoration:none; /*去掉超连接的下划线*/
+}
+.login-help a:hover{
+    text-decoration:underline;  
+}
+.login-title{
+    text-align:center;
+    font-size:24px;
+    color:#FFF;
+
+}

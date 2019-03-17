@@ -1,0 +1,47 @@
+<html>
+<head>
+<script type="text/javascript">
+function getCookie(c_name)//该函数的功能是获得已经储存下来的Cookie
+{		//html 的Document对象：每个载入浏览器的 HTML 文档都会成为 Document 对象。Document 对象使我们可以从脚本中对 HTML 页面中的所有元素进行访问。
+if (document.cookie.length>0)
+  {
+  c_start=document.cookie.indexOf(c_name + "=")  // indexOf 返回指定的字符串值在字符串中首次出现的位置，如果找不到的话返回-1
+  if (c_start!=-1)  // 如果找到cookie信息
+    {
+    c_start=c_start + c_name.length+1
+    c_end=document.cookie.indexOf(";",c_start)   //c_start规定在字符串中开始检索的位置
+    if (c_end==-1) c_end=document.cookie.length   // 如果没有找到;
+    return unescape(document.cookie.substring(c_start,c_end)) // unescape对escape编码的字符串进行解码
+    }
+  }
+return ""  //如果没有找到返回空字符串
+}
+
+
+function setCookie(c_name,value,expiredays)
+{
+var exdate=new Date()
+exdate.setDate(exdate.getDate()+expiredays)  //getDate(从Date对象返回一个月中的某一天 (1 ~ 31)。
+document.cookie=c_name+ "=" +escape(value)+
+((expiredays==null) ? "" : ";expires="+exdate.toUTCString())  //toUTCString()根据世界时把 Date 对象转换为字符串
+}
+
+function checkCookie()
+{
+username=getCookie('username')
+if (username!=null && username!="")
+  {alert('Welcome again '+username+'!')}
+else
+  {
+  username=prompt('Please enter your name:',"") //prompt() 方法用于显示可提示用户进行输入的对话框
+  if (username!=null && username!="")
+    {
+    setCookie('username',username,365)  //保存cookie信息
+    }
+  }
+}
+</script>
+</head>
+<body onLoad="checkCookie()">
+</body>
+</html>
